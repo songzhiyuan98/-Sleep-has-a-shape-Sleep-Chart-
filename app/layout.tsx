@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 const title = "Sleep has a shape — Sleep Chart";
 const description =
-  "Explore how sleep duration is associated with 23 biological ageing clocks across organs, imaging and omics.";
+  "Explore nine significant nonlinear sleep-duration associations found among 23 biological ageing clocks.";
 
 export const viewport: Viewport = {
   colorScheme: "dark",

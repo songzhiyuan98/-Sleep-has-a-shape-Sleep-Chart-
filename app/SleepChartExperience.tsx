@@ -332,9 +332,9 @@ export function SleepChartExperience() {
               <em>a shape.</em>
             </h1>
             <p className="hero-deck">
-              Across 23 biological ageing clocks, both short and long sleep
-              were associated with higher biological age gaps — across organs,
-              imaging and molecular data.
+              Among 23 biological ageing clocks studied, nine showed
+              significant nonlinear associations with sleep duration — their
+              fitted signals rising toward both shorter and longer sleep.
             </p>
             <div className="hero-links">
               <a className="text-link text-link--primary" href="#clocks">
@@ -674,16 +674,6 @@ export function SleepChartExperience() {
                 pulmonary and digestive endpoints all appeared in the
                 short-sleep profile.
               </p>
-              <dl>
-                <div>
-                  <dt>Genetic correlations</dt>
-                  <dd>153 / 527</dd>
-                </div>
-                <div>
-                  <dt>Prospective associations</dt>
-                  <dd>153 / 726</dd>
-                </div>
-              </dl>
             </article>
 
             <div className="outcome-centre" aria-hidden="true">
@@ -712,6 +702,31 @@ export function SleepChartExperience() {
                 Long sleep may also mark latent illness or compensation.
               </p>
             </article>
+          </div>
+
+          <div
+            className="outcome-totals reveal"
+            aria-label="Combined short- and long-sleep study totals"
+          >
+            <div className="outcome-totals-copy">
+              <span className="plate-label">
+                Short + long · combined study totals
+              </span>
+              <p>
+                Significant associations counted across both abnormal-sleep
+                patterns; short sleep predominated in the prospective results.
+              </p>
+            </div>
+            <dl>
+              <div>
+                <dt>Genetic correlations</dt>
+                <dd>153 / 527</dd>
+              </div>
+              <div>
+                <dt>Prospective associations</dt>
+                <dd>153 / 726</dd>
+              </div>
+            </dl>
           </div>
 
           <div className="mortality-strip reveal">
@@ -777,7 +792,7 @@ export function SleepChartExperience() {
             <div className="pathway-copy">
               <article data-path="short">
                 <span className="pathway-caption">A MORE DIRECT PROFILE</span>
-                <h3>Short sleep reaches mood more directly.</h3>
+                <h3>Short-sleep links were more direct.</h3>
                 <p>
                   Most late-life depression associations appeared as direct
                   paths. For LLD1, adipose MRIBAG was the one significant
@@ -786,11 +801,10 @@ export function SleepChartExperience() {
               </article>
               <article data-path="long">
                 <span className="pathway-caption">A MORE MEDIATED PROFILE</span>
-                <h3>Long sleep travels through organs.</h3>
+                <h3>Long-sleep links were more organ-mediated.</h3>
                 <p>
-                  Brain, adipose and liver MRI ageing clocks carried more of the
-                  statistical mediation, consistent with a slower, systemic
-                  route.
+                  Brain, adipose and liver MRI ageing clocks appeared in more
+                  statistical mediation paths in these models.
                 </p>
               </article>
             </div>

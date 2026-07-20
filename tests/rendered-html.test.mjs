@@ -37,8 +37,13 @@ test("server-renders the complete research story", async () => {
   assert.match(html, /Sleep has a shape\./);
   assert.match(html, /494,951/);
   assert.match(html, /9 of 23/);
+  assert.match(
+    html,
+    /Among 23 biological ageing clocks studied, nine showed significant nonlinear associations/,
+  );
   assert.match(html, /Association is not prescription/);
   assert.match(html, /One sleep question\. Three biological layers\./);
+  assert.match(html, /Short \+ long · combined study totals/i);
 });
 
 test("renders accessible controls, boundaries, and primary evidence links", async () => {

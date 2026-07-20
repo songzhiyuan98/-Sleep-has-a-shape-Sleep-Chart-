@@ -31,11 +31,23 @@ test("contains the nine significant clocks and the full modality totals", () => 
   assert.equal(STUDY.sleepReports, 494_951);
 });
 
-test("preserves representative Nature source-data minima", () => {
-  assert.equal(getStudyMinimum("brain-prot", "female"), 7.82);
-  assert.equal(getStudyMinimum("brain-prot", "male"), 7.7);
-  assert.equal(getStudyMinimum("endocrine-met", "male"), 6.37);
-  assert.equal(getStudyMinimum("brain-mri", "female"), 6.48);
+test("preserves every sex-stratified Nature source-data minimum", () => {
+  const expected = {
+    "brain-prot": { female: 7.82, male: 7.7 },
+    "pulmonary-prot": { female: 7.64, male: 7.03 },
+    "hepatic-prot": { female: 7.52, male: 7.7 },
+    "immune-prot": { female: 7.76, male: 7.58 },
+    "skin-prot": { female: 7.7, male: 7.39 },
+    "endocrine-met": { female: 6.67, male: 6.37 },
+    "brain-mri": { female: 6.48, male: 6.42 },
+    "adipose-mri": { female: 6.91, male: 6.91 },
+    "pancreas-mri": { female: 6.85, male: 6.79 },
+  };
+
+  for (const [clockId, minima] of Object.entries(expected)) {
+    assert.equal(getStudyMinimum(clockId, "female"), minima.female);
+    assert.equal(getStudyMinimum(clockId, "male"), minima.male);
+  }
 });
 
 test("reports the published rounded minima range for each study stratum", () => {
